@@ -6,11 +6,11 @@
     <html xmlns:th="http://www.thymeleaf.org">
     <title>Pet Added</title>
     <style>
-        /* Add these styles directly in the head to ensure they're applied */
+
         .pet-info-table {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 0 15px; /* Creates vertical spacing between rows */
+            border-spacing: 0 15px;
             margin-bottom: 50px;
         }
 
@@ -58,7 +58,7 @@
             <button class="add-pet-btn" onclick="window.location.href='/'">Go Back</button>
         </div>
 
-        <!-- Section to display already added animals -->
+        <!-- Display already added animals -->
         <div class="animal-list">
             <h2>List of Added Animals</h2>
             <div th:each="animal : ${animals}">

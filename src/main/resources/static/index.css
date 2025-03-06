@@ -1,4 +1,4 @@
-/* Reset styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -38,17 +38,17 @@ h1 {
 }
 
 .label {
-    width: 100px;       /* Ensures labels have the same width */
-    text-align: right;  /* Aligns label text to the right */
-    margin-right: 20px; /* Adds spacing between label and input */
+    width: 100px;
+    text-align: right;
+    margin-right: 20px;
     font-family: 'Degular', sans serif;
     font-size: 17px;
 }
 
 .form-container {
     display: flex;
-    flex-direction: column; /* Align children (labels and inputs) vertically */
-    gap: 20px; /* Add space between form elements */
+    flex-direction: column;
+    gap: 20px;
 }
 .form-row {
     display: flex;
@@ -57,7 +57,7 @@ h1 {
 }
 
 input, select {
-    flex: 1;  /* Makes inputs fill the remaining space */
+    flex: 1;
     padding: 10px;
     width: 200px;
     border-radius: 6px;
@@ -66,12 +66,12 @@ input, select {
     font-size: 17px;
 }
 select {
-    appearance: none; /* Removes default drop-down styling in most browsers */
+    appearance: none;
 }
 
 .add-pet-btn {
     display: block;
-    margin: 15px auto; /* Centers the button horizontally */
+    margin: 15px auto;
     padding: 15px 25px;
     background-color: #40F99B;
     color: black;
@@ -80,19 +80,22 @@ select {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    width: auto;  /* Let the width be determined by content */
+    width: auto;
 }
 
 .add-pet-btn:hover {
     background-color: #3CDF8E;
 }
 
+
+/* AnimalList*/
+
 .animal-list {
     margin-top: 50px;
     padding: 20px;
 }
 
-/* AnimalList*/
+
 .animal-list h2 {
     text-align: center;
     font-size: 30px;
@@ -100,14 +103,14 @@ select {
     font-weight: bold;
 }
 
-/* Table for animal info */
+
 .pet-info-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
 }
 
-/* Style each animal row */
+
 .animal-info-row {
     border: 1px solid #ddd;
     padding: 15px;
@@ -120,7 +123,7 @@ select {
     align-items: center;
 }
 
-/* Pet info labels */
+
 .pet-info-label {
     font-weight: bold;
     font-size: 20px;
@@ -128,14 +131,14 @@ select {
     color: #333;
 }
 
-/* Pet info values */
+
 .pet-info-value {
     font-size: 20px;
     width: 60%;
     color: #555;
 }
 
-/* Each animal card */
+
 .animal-card {
     display: flex;
     justify-content: space-between;
@@ -145,14 +148,14 @@ select {
 
 }
 
-/* Animal details section */
+
 .animal-card .animal-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Each animal card section */
+
 .animal-card .animal-info {
     margin-bottom: 10px;
 }
