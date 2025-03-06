@@ -1,17 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body
-{
+
+body {
     font-family: 'Degular', sans serif;
 }
 
 h1 {
-
     font-size: 50px;
     text-align: center;
     margin-bottom: 130px;
+
 }
 
-.wrapper{
+.wrapper {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -22,56 +27,94 @@ h1 {
     align-items: center;
 }
 
-.content{
+.content {
 
     width: 100%;
 }
 
 .label {
-    width: 100px;       /* Ensures labels have the same width */
-    text-align: right;  /* Aligns label text to the right */
+    width: 100px; /* Ensures labels have the same width */
+    text-align: right; /* Aligns label text to the right */
     margin-right: 20px; /* Adds spacing between label and input */
     font-family: 'Degular', sans serif;
 }
 
 .form-container {
     display: flex;
-    flex-direction: column; /* Align children (labels and inputs) vertically */
+    flex-direction: column; /* Align children vertically */
     gap: 20px; /* Add space between form elements */
-}
-.form-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%; /* Take full width */
+
 }
 
+.form-row {
+    display: flex;
+    align-items: center; /* Ensure text is vertically centered */
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+
 input, select {
-    flex: 1;  /* Makes inputs fill the remaining space */
+    flex: 1;
     padding: 10px;
     width: 200px;
     border-radius: 6px;
     border: 0.7px solid black;
     font-family: 'Degular', sans serif;
+    font-size: 15px;
 }
+
 select {
     appearance: none; /* Removes default drop-down styling in most browsers */
 }
 
-
 .add-pet-btn {
-    display: block;
-    margin: 20px auto; /* Centers the button horizontally */
+    width: 200px; /* Match input field width */
     padding: 10px 15px;
-    background-color: #9eefb5;
+    background-color: #c9ff8a;
     color: black;
     border: 0.7px solid black;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    width: auto;  /* Let the width be determined by content */
+    font-family: 'Degular', sans-serif;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: auto;
 }
 
 .add-pet-btn:hover {
     background-color: #80dd99;
 }
 
+
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing between rows */
+    margin-bottom: 30px; /* Add space before the button */
+}
+
+/* Info row styling */
+.info-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Label styling */
+.info-label {
+    font-weight: bold;
+    width: 100px; /* Fixed width to align labels */
+    text-align: right;
+    margin-right: 20px; /* Space between label and value */
+}
+
+/* Value styling */
+.info-value {
+    flex: 1;
+}

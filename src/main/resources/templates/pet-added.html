@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/index.css">
+    <html xmlns:th="http://www.thymeleaf.org">
+    <title>Pet Added</title>
+
+</head>
+<body>
+<div class="wrapper">
+    <h1 class="header">Pet Added Successfully</h1>
+
+    <div class="content">
+        <div class="info-container">
+            <div class="info-row">
+                <p class="info-label"><strong>Pet Type:</strong></p>
+                <span class="info-value" th:text="${pet.getType()}"></span>
+            </div>
+            <div class="info-row">
+                <p class="info-label"><strong>Pet Name:</strong></p>
+                <span class="info-value" th:text="${pet.petName}"></span>
+            </div>
+            <div class="info-row">
+                <p class="info-label"><strong>Pet Age:</strong></p>
+                <span class="info-value" th:text="${pet.age}"></span>
+            </div>
+
+            <div class="go-back-container">
+                <button class="add-pet-btn" onclick="window.location.href='/'">Go Back</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

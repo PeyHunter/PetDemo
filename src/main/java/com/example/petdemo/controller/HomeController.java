@@ -1,4 +1,4 @@
-package Controller;
+package com.example.petdemo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 public class HomeController
 {
     @GetMapping("/")
-    public String indext()
+    public String index()
     {
-        return "home/index";
+        return "/index";
     }
 }
