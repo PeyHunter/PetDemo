@@ -57,7 +57,29 @@
         <div class="go-back-container">
             <button class="add-pet-btn" onclick="window.location.href='/'">Go Back</button>
         </div>
-    </div>
+
+        <!-- Section to display already added animals -->
+        <div class="animal-list">
+            <h2>List of Added Animals</h2>
+            <div th:each="animal : ${animals}">
+                <div class="animal-card">
+                    <div class="animal-details">
+                        <div class="animal-info">
+                            <strong>Pet Type:</strong>
+                            <span th:text="${animal.getType()}"></span>
+                        </div>
+                        <div class="animal-info">
+                            <strong>Pet Name:</strong>
+                            <span th:text="${animal.petName}"></span>
+                        </div>
+                        <div class="animal-info">
+                            <strong>Pet Age:</strong>
+                            <span th:text="${animal.age}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
 </body>
 </html>

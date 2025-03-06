@@ -14,7 +14,7 @@ body {
 h1 {
     font-size: 50px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     line-height: 1;
 }
 
@@ -71,12 +71,12 @@ select {
 
 .add-pet-btn {
     display: block;
-    margin: 20px auto; /* Centers the button horizontally */
+    margin: 15px auto; /* Centers the button horizontally */
     padding: 15px 25px;
     background-color: #40F99B;
     color: black;
     border: 0.7px solid black;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -85,4 +85,74 @@ select {
 
 .add-pet-btn:hover {
     background-color: #3CDF8E;
+}
+
+.animal-list {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* AnimalList*/
+.animal-list h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Table for animal info */
+.pet-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+/* Style each animal row */
+.animal-info-row {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Pet info labels */
+.pet-info-label {
+    font-weight: bold;
+    font-size: 20px;
+    width: 40%;
+    color: #333;
+}
+
+/* Pet info values */
+.pet-info-value {
+    font-size: 20px;
+    width: 60%;
+    color: #555;
+}
+
+/* Each animal card */
+.animal-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+}
+
+/* Animal details section */
+.animal-card .animal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Each animal card section */
+.animal-card .animal-info {
+    margin-bottom: 10px;
 }
