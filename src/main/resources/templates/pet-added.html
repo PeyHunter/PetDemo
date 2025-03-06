@@ -5,34 +5,59 @@
     <link rel="stylesheet" href="/index.css">
     <html xmlns:th="http://www.thymeleaf.org">
     <title>Pet Added</title>
+    <style>
+        /* Add these styles directly in the head to ensure they're applied */
+        .pet-info-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px; /* Creates vertical spacing between rows */
+            margin-bottom: 50px;
+        }
 
+        .pet-info-label {
+            font-weight: bold !important;
+            text-align: right !important;
+            width: 40%;
+            padding-right: 30px !important;
+            font-size: 25px;
+        }
+
+        .pet-info-value {
+            text-align: left !important;
+            width: 60%;
+            font-size: 25px;
+        }
+
+        .go-back-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
     <h1 class="header">Pet Added Successfully</h1>
 
     <div class="content">
-        <div class="info-container">
-            <div class="info-row">
-                <p class="info-label"><strong>Pet Type:</strong></p>
-                <span class="info-value" th:text="${pet.getType()}"></span>
-            </div>
-            <div class="info-row">
-                <p class="info-label"><strong>Pet Name:</strong></p>
-                <span class="info-value" th:text="${pet.petName}"></span>
-            </div>
-            <div class="info-row">
-                <p class="info-label"><strong>Pet Age:</strong></p>
-                <span class="info-value" th:text="${pet.age}"></span>
-            </div>
-
-            <div class="go-back-container">
-                <button class="add-pet-btn" onclick="window.location.href='/'">Go Back</button>
-            </div>
+        <table class="pet-info-table">
+            <tr>
+                <td class="pet-info-label"><strong>Pet Type:</strong></td>
+                <td class="pet-info-value" th:text="${pet.getType()}"></td>
+            </tr>
+            <tr>
+                <td class="pet-info-label"><strong>Pet Name:</strong></td>
+                <td class="pet-info-value" th:text="${pet.petName}"></td>
+            </tr>
+            <tr>
+                <td class="pet-info-label"><strong>Pet Age:</strong></td>
+                <td class="pet-info-value" th:text="${pet.age}"></td>
+            </tr>
+        </table>
+        <div class="go-back-container">
+            <button class="add-pet-btn" onclick="window.location.href='/'">Go Back</button>
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
