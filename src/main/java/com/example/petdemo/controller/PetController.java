@@ -12,7 +12,6 @@ public class PetController {
     @Autowired
     private AnimalManager animalManager;
 
-    // This method handles displaying the "Pet Added" page after the pet is created
     @PostMapping("/pet-added")
     public String createPet(
             @RequestParam String petName,
@@ -42,16 +41,16 @@ public class PetController {
                 throw new IllegalArgumentException("Unknown species: " + species);
         }
 
-        animalManager.addAnimail(pet); // Add the pet to the list of animals
+        animalManager.addAnimail(pet);
         model.addAttribute("pet", pet);
-        model.addAttribute("animals", animalManager.getAnimals()); // Pass the list of animals to the view
-        return "pet-added"; // Thymeleaf template for pet added page
+        model.addAttribute("animals", animalManager.getAnimals());
+        return "pet-added";
     }
 
-    // This method renders the page that displays added pets (after a successful POST request)
+
     @GetMapping("/pet-added")
     public String showAddedPets(Model model) {
-        model.addAttribute("animals", animalManager.getAnimals()); // Pass the list of animals to the view
-        return "pet-added"; // Display the page with the added pets
+        model.addAttribute("animals", animalManager.getAnimals());
+        return "pet-added";
     }
 }
